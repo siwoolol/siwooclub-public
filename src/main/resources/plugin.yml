@@ -1,0 +1,93 @@
+#
+# This is the file your server opens to find the main class of your 
+# plugin and its information. We automatically replace variables here 
+# from your pom.xml file. YOU GENERALLY DO NOT NEED TO EDIT THIS.
+#
+# See https://www.spigotmc.org/wiki/plugin-yml/ for more information.
+# 
+name: ${project.name}
+version: ${project.version}
+main: ${main.class}
+author: ${author}
+
+# DO NOT EDIT. This api-version is used for maximum backward compatibility.
+api-version: 1.13
+
+# Load the following libraries
+libraries:
+  # DO NOT EDIT THE FIRST LIBRARY, required to make your plugin work under Java 15+
+  - org.openjdk.nashorn:nashorn-core:15.4
+  #- org.jsoup:jsoup:1.14.3
+  #- com.zaxxer:HikariCP:5.0.1  
+
+# Same as libraries, but only works on Minecraft <1.16 using our own special method.
+#legacy-libraries:
+
+# Plugins that we support so that we are loaded after them for your convenience.
+softdepend: [ AuthMe, BanManager, BungeeChatAPI, CMI, DiscordSRV, Factions, Feudal, ItemsAdder, Essentials, LegacyFactions, Lands, LuckPerms, Multiverse-Core, MVdWPlaceholderAPI, MythicMobs, mcMMO, Nicky, PlaceholderAPI, ProtocolLib, SimpleClans, Towny, TownyChat, Vault, WorldEdit ]
+
+#
+# The commands are built at runtime so you can change them easily within the settings.
+# Do not change anything in here, you will break the plugin and get no support.
+#
+commands:
+  shop:
+    description: "Opens The Shop Menu"
+    usage: /shop
+  setmotd:
+    description: "Sets The MOTD (Admin Only)"
+    usage: /setmotd <motd>
+  setfakemax:
+    description: "Sets The Fake Max Player Amounts (Admin Only)"
+    usage: /setfakemax <amount>
+  points:
+    description: "Controls The Point Economy (Admin Only)"
+    usage: /points <player> <add/set/remove> <amount>
+  bet:
+    description: "Does a Point Bet"
+    usage: /bet <amount>
+  pay:
+    description: "Pay a Player"
+    usage: /pay <player> <amount>
+  daily:
+    description: "Gets a Daily Reward Of 70~200 Points! (Every 24 Hours)"
+    usage: /daily
+  aura:
+    description: "Sets Player Aura (Admin Only)"
+    usage: /aura <player> <give/remove> [aura]
+  balance:
+    description: "Checks the player's balance"
+    usage: /balance <player>
+  rob:
+    description: "Rob Up to 20% of the player's Points! (30% chance success)"
+    usage: /rob <player>
+  siwooac:
+    usage: /siwooac help
+    description: "SiwooAC"
+  aclogs:
+    usage: /aclogs
+    description: "View AC Logs (Admin Only)"
+  timerestart:
+    usage: /timerestart <minutes>
+    description: "Restart In Specified Times (Admin Only)"
+  broadcast:
+    usage: /broadcast [message]
+    description: "Broadcasts the message provided (Admin Only)"
+  toggle:
+    usage: /toggle <nether/end>
+    description: "Toggles Nether and End Entrance (Admin Only)"
+  afknpcs:
+    usage: /afknpcs <add/remove> <id>
+    description: "Adds a AFK NPC"
+  immortal:
+    usage: /immortal
+    description: "Makes you Immortal (Admin Only)"
+  track:
+    usage: /track <player>
+    description: "Tracks a player (Admin Only)"
+  trackdisable:
+    usage: /trackdisable
+    description: "Disables the Active Track (Admin Only)"
+  fight:
+    usage: /fight <player>
+    description: "Fights a player"

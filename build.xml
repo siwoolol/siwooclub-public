@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<!DOCTYPE xml>
+<project name="SiwooClub" default="Build">
+
+    <!-- We use this file to compile your plugin to your plugins/ directory
+         automatically and use the hot swap (also known as live debug) feature.
+
+         It does not support dependencies easily so the only dependency
+         we include here is Foundation. It cannot change Foundation's packages
+         so you can only debug one plugin at a time to avoid conflicts. -->
+
+    <!-- Ninja: We read pom.xml file to find the Foundation version to use -->
+    <xmlproperty file="pom.xml" prefix="pom" keeproot="false"/>
+    <property name="foundation.version" value="${pom.properties.foundation.version}"/>
+
+    <!-- Change the name="" key on the top to your plugin's name
+         and edit the path below to where your server is located.
+
+         You can simply duplicate the <jar>...</jar> section
+         to compile your plugin to multiple servers. -->
+
+    <target name="Build">
+        <jar jarfile="C:\Users\StraightGG\Documents\siwoo.club season 1\plugins\${ant.project.name}.jar"
+             basedir="./target/classes/"
+             includes="**/*">
+        </jar>
+    </target>
+
+</project> 
