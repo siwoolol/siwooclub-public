@@ -46,15 +46,6 @@ public class Immortal implements CommandExecutor {
                 player.spigot().sendMessage(ChatMessageType.ACTION_BAR, new TextComponent(ChatColor.GREEN + "Your Immortal Status Was Set to False"));
             }
         }
-
-        if (args.length == 1) {
-            Player target = Bukkit.getPlayer[args.1]; // wont work but still have the idea
-            if(!target.isInvulnerable()) {
-                target.setInvulnerable(true);
-            } else if (target.isInvulnerable()) {
-                target.setInvulnerable(false);
-            }
-        }
         return true;
     }
 
