@@ -20,7 +20,7 @@
          to compile your plugin to multiple servers. -->
 
     <target name="Build">
-        <jar jarfile="C:\Users\StraightGG\Documents\siwoo.club season 1\plugins\${ant.project.name}.jar"
+        <jar jarfile="C:\Users\strai\Documents\${ant.project.name}.jar"
              basedir="./target/classes/"
              includes="**/*">
         </jar>
